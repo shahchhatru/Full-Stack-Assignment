@@ -36,5 +36,31 @@ def taskDetail(request,pk):
     return Response(serializer.data)
 
 
+@api_view(['POST'])
+def taskCreate(request):
+    serializer=TaskSerializer(data=request.data)
+    print("validiity is",serializer.is_valid())
+    if serializer.is_valid():
+        print("serializer is valid")
+        serializer.save()
+
+    return Response(serializer.data)
 
 
+@api_view(['POST'])
+def taskUpdate(request,pk):
+    tasks=Task.objects.get(id=pk)
+    serializer=TaskSerializer(instance=tasks,data=request.data)
+    print("validiity is",serializer.is_valid())
+    if serializer.is_valid():
+        print("serializer is valid")
+        serializer.save()
+
+    return Response(serializer.data)
+
+@api_view(['DELETE'])
+def taskDelete(request,pk):
+    tasks=Task.objects.get(id=pk)
+    tasks.delete()
+
+    return Response(f'Item {pk} successfully deleted')
