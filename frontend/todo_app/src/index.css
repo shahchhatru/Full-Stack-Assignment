@@ -1,0 +1,18 @@
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
+
+body{
+  width:100vw;
+  height:100vh;
+  background:linear-gradient(141.36753186448686deg, rgba(5, 0, 154,1) 11.3%,rgba(4, 1, 154,1) 11.3%,rgba(0, 232, 191,1) 78.82222222222222%,rgba(0, 232, 191,1) 89.80277777777778%);
+}
+
+@media screen and (max-width:750px) {
+  body{
+    background:linear-gradient(166.57913198213248deg, rgba(5, 0, 154,1) 10.966666666666669%,rgba(4, 1, 154,1) 10.966666666666669%,rgba(0, 232, 191,1) 67.04444444444445%,rgba(0, 232, 191,1) 76.16388888888889%);
+  }
+  
+}
