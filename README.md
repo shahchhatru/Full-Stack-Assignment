@@ -1,3 +1,49 @@
+## setup INstruction for Frontend
+### to the frontend folder of project
+
+```bash
+    cd Frontend
+    cd todo_app
+```
+```bash
+    npm install
+
+```
+
+```bash
+    npm run dev
+
+```
+You should be able view application at localhost:5173;
+
+### setup instruction for Backend
+
+```bash
+    cd server
+
+
+```
+only the first time needed to install
+```bash
+   pipenv install
+
+```
+
+```bash
+    pipenv shell
+
+```
+
+```bash
+    cd crud_server
+    pipenv run python3 manage.py runserver
+```
+
+![image1](./images/h1.png)
+![image2](./images/h1.png)
+![image3](./images/h1.png)
+
+
 ## Full-Stack-Assignment
 Fullstack Internship Technical Task: Building a To-Do List Application
 
@@ -64,4 +110,7 @@ Your task will be evaluated based on the following criteria:
 - Bonus Features: Any extra features beyond the basic requirements will be considered a plus.
 
 Note: Feel free to reach out if you have any questions during the task. Good luck, and we're excited to see your work!
+
+
+
 

@@ -4,11 +4,13 @@ import TaskCard from "../TaskCard/TaskCard";
 import {AiOutlineFileAdd} from '@react-icons/all-files/ai/AiOutlineFileAdd'
 import styles from "./style.module.css";
 import {motion} from 'framer-motion';
+import {useNavigate} from 'react-router-dom';
 
 const Todoapp = () => {
   const [width, setWidth] = useState();
   const carousel = useRef();
   const [tasks, setTasks] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
    
@@ -24,13 +26,17 @@ const Todoapp = () => {
     axios.get('http://127.0.0.1:8000/api/task-list/')
     .then(response => {
       setTasks(response.data);
-      console.log(response.data);
+      // console.log(response.data);
     })
     .catch(error => {
       console.error('Error fetching tasks:', error);
       window.alert(error);
     });
-  }, []);
+  });
+
+  const handleAddBtn=()=>{
+    navigate('/add')
+  }
 
 
   return (
@@ -39,7 +45,7 @@ const Todoapp = () => {
         <div className={styles['heading']}>
           Tasks
         </div>
-        <div className={styles['addbutton']}>
+        <div className={styles['addbutton']} onClick={handleAddBtn}>
             <AiOutlineFileAdd/>
         </div>
       </div>

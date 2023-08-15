@@ -1,8 +1,10 @@
-import React,{useReducer} from 'react'
+import React,{useReducer} from 'react';
+import {useNavigate} from 'react-router-dom';
 import InputBox from '../InputBox/InputBox';
 import RadioInput from './RadioInput/RadioInput';
 import axios from 'axios'
 import styles from './styles.module.css';
+
 
 function formReducer(state,action) {
   switch (action.type) {
@@ -30,6 +32,8 @@ const initialFormField={
 }
 const Formpage = () => {
 
+  const navigate=useNavigate();
+
   const [state,dispatch]=useReducer(formReducer,initialFormField);
 
 
@@ -44,7 +48,8 @@ const Formpage = () => {
       // You can handle the response data here as needed
 
       // If you want to reset the form fields after successful submission
-      dispatch({ type: 'RESET_FORM' }); // You can define a new action type to reset the form
+      dispatch({ type: 'RESET_FORM' });// You can define a new action type to reset the form
+      navigate('/');
     } catch (error) {
       console.error('Error submitting form:', error);
       // Handle the error here

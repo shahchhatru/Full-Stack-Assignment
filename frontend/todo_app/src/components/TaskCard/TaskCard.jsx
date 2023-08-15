@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import {BiTimeFive} from '@react-icons/all-files/bi/BiTimeFive';
 import {GiSandsOfTime} from '@react-icons/all-files/gi/GiSandsOfTime';
 import {MdDoneAll} from '@react-icons/all-files/md/MdDoneAll';
@@ -13,6 +14,20 @@ import { Link } from 'react-router-dom';
 
 
 const TaskCard = (props) => {
+
+   const handleDelete = async () => {
+    try {
+      const response = await axios.delete(`http://127.0.0.1:8000/api/task-delete/${props.task.id}/`);
+      console.log('DELETE request response:', response.data);
+      // Handle success or update state as needed
+
+      // You might want to reload the tasks or update the list after deletion
+      // You can do this by calling a function from your parent component or using a state management solution
+    } catch (error) {
+      console.error('Error deleting task:', error);
+      // Handle error
+    }
+  };
   
   const [Value,setValue]=useState(0);
   return (
@@ -39,7 +54,7 @@ const TaskCard = (props) => {
         </Link>
         
         <Link to="#">
-          <span className={styles['icon']} style={{color:"red"}}>
+          <span className={styles['icon']} style={{color:"red"}} onClick={()=>{handleDelete()}}>
             <AiOutlineDelete/>
           </span>
         </Link>
