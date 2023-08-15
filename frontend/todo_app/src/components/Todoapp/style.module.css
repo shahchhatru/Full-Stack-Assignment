@@ -4,11 +4,13 @@
     display:flex;
     flex-direction: column;
     gap:10px;
-    background:#DEE6F9;
+    background: lightblue;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     border-radius:50px;
     transition: all ease-in 0.3s;
   }
+
+
   .to-do-app-container:hover{
     box-shadow: rgba(197, 187, 187, 0.2) 0px 60px 40px -7px;
   }
@@ -18,7 +20,25 @@
     width:100%;
     flex:1;
     border-radius: inherit;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding:30px;
   
+  }
+
+  .todoapp-header .heading {
+    color:white;
+    font-size:2.6rem;
+  }
+  .todoapp-header .addbutton{
+    font-size:2.6rem;
+    line-height: 2.6rem;
+    background:lawngreen;
+    padding:5%;
+    color:white;
+    border-radius:50%;
   }
   .todoapp-body{
     /* background:green; */
@@ -27,6 +47,34 @@
     padding:20px;
     border-radius: inherit;
   }
+
+  .carousel {
+    cursor: grab;
+    overflow: hidden;
+    /* background: palevioletred; */
+  }
+  
+  .item {
+    min-height: fit-content;
+    min-width: fit-content;
+    padding: 10px;
+    margin-bottom:20px;
+
+  }
+  
+  .item:nth-child() {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    pointer-events: none;
+  }
+  
+  .inner-carousel {
+    display: flex;
+    /* background: lightblue; */
+    
+  }
+  
   
   @media screen and (min-width:750px) {
     .to-do-app-container{

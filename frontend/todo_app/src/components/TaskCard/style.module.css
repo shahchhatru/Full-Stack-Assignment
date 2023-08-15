@@ -92,7 +92,7 @@
 
 @media screen and (max-width:800px){
     .TaskcardContainer{
-        width:70%;
+        width:300px;
         min-height: 200px;
         height:auto;
         margin:2% 1%;
