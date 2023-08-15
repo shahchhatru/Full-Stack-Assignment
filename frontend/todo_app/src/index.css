@@ -1,13 +1,22 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200&display=swap');
 *{
   margin:0px;
   padding:0px;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body{
   width:100vw;
   height:100vh;
   background:linear-gradient(141.36753186448686deg, rgba(5, 0, 154,1) 11.3%,rgba(4, 1, 154,1) 11.3%,rgba(0, 232, 191,1) 78.82222222222222%,rgba(0, 232, 191,1) 89.80277777777778%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:black;
+
 }
 
 @media screen and (max-width:750px) {

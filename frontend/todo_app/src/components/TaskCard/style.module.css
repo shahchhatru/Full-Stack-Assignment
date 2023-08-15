@@ -1,0 +1,110 @@
+.TaskcardContainer{
+    font-family: 'Poppins','Outfit' ,sans-serif;
+    font-weight: 300;
+    margin:10px 0px 0px 10px;
+    background:#fff;
+    min-height:50px;
+    border-radius: 4%;
+    padding:25px 20px;
+    width:300px;
+    height:400px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    
+}
+
+.TaskcardContainer:hover{
+    border:1px solid #743ad5;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+
+
+
+.TaskcardContainer .body-container{
+    height:100%;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    /* background:red; */
+    
+}
+.TaskcardContainer .body-container .top-bar{
+    width:100%;
+    flex:1;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap:wrap;
+    gap:20px;
+    padding:10px;
+    
+}
+.TaskcardContainer .body-container .subHeader{
+ 
+ display:flex;
+ justify-content: space-around;
+ align-items: baseline;
+ padding:10px 5px;
+}
+
+.TaskcardContainer .body-container .desc{
+    width:100%;
+    height:100%;
+    flex:3;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* background:blue; */
+    gap:30px;
+    overflow: hidden;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 300;
+    
+}
+
+.TaskcardContainer .body-container .top-bar .icon{
+    font-size:1.5rem;
+    cursor:pointer;
+   
+}
+.text{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 100;
+    text-decoration: none !important;
+}
+
+.TaskcardContainer .footer {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    width:100%;
+    font-size:1.6rem;
+    padding:10px 4px;
+}
+
+.TaskcardContainer .footer .icon{
+    cursor:pointer;
+}
+
+
+
+@media screen and (max-width:800px){
+    .TaskcardContainer{
+        width:70%;
+        min-height: 200px;
+        height:auto;
+        margin:2% 1%;
+    }
+
+    .TaskcardContainer .logo-container img{
+        width:90px;
+        height:90px;
+    }
+
+    .TaskcardContainer .body-container .top-bar .icon{
+        font-size:2rem;
+    }
+
+}
