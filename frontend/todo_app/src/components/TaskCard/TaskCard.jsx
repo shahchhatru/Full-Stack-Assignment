@@ -12,22 +12,23 @@ import { Link } from 'react-router-dom';
 
 
 
-const TaskCard = () => {
+const TaskCard = (props) => {
+  
   const [Value,setValue]=useState(0);
   return (
     <div className={styles.TaskcardContainer}>
     <div className={styles['body-container']}>
       <div className={styles['top-bar']}>
-        <span className={styles['icon']}><MdDateRange/><span className={styles['text']}>date</span></span>
-        <span className={styles['icon']}><MdUpdate/><span className={styles['text']}>date</span></span>
+        <span className={styles['icon']}><MdDateRange/><span className={styles['date-text']}>{props.task.due_date?props.task.due_date:'not set'}</span></span>
+        <span className={styles['icon']}><MdUpdate/><span className={styles['date-text']}>date</span></span>
        
       </div>
       <div className={styles.subHeader}>
         {Value===1?<span style={{color:"green"}}><MdDoneAll />Completed</span>:<span>Due</span>} <ToggleSwitch Value={Value} setValue={setValue}/>
       </div>
       <div className={styles['desc']}>
-        <h2 className={styles['text']}>This is my title</h2>
-        This is my first task
+        <h2 className={styles['text']}>{props.task.title}</h2>
+        {props.task.description?props.task.description:''}
         </div>
         <div className={styles["footer"]}>
         <Link to="#">

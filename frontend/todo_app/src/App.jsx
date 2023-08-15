@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { TaskCard } from './components'
+import { TaskCard,Formpage } from './components'
 import { Route, Routes } from 'react-router-dom';
 
 import './App.css'
@@ -12,6 +12,7 @@ function App() {
     <>
     <Routes>
       <Route path="/" element={<Todoapp/>}/>
+      <Route path="/add" element={<Formpage/>}/>
     </Routes>
       
     </>

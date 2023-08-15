@@ -19,7 +19,9 @@
 }
 
 
-
+.TaskcardContainer .body-container .top-bar .icon .date-text{
+    font-size: 0.8rem !important;;
+}
 
 .TaskcardContainer .body-container{
     height:100%;
@@ -69,6 +71,12 @@
     cursor:pointer;
    
 }
+.TaskcardContainer .body-container .top-bar .icon:nth-child(1){
+    color:green;
+}
+.TaskcardContainer .body-container .top-bar .icon:nth-child(2){
+    color:lightblue;
+}
 .text{
     font-family: 'Poppins',sans-serif;
     font-weight: 100;
@@ -96,15 +104,12 @@
         min-height: 200px;
         height:auto;
         margin:2% 1%;
+        gap:20px;
     }
 
-    .TaskcardContainer .logo-container img{
-        width:90px;
-        height:90px;
-    }
 
     .TaskcardContainer .body-container .top-bar .icon{
-        font-size:2rem;
+        font-size:1.1rem;
     }
 
 }
