@@ -40,8 +40,8 @@ only the first time needed to install
 ```
 
 ![image1](./images/h1.png)
-![image2](./images/h1.png)
-![image3](./images/h1.png)
+![image2](./images/h2.png)
+![image3](./images/h3.png)
 
 
 ## Full-Stack-Assignment
